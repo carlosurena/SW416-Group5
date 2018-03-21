@@ -33,7 +33,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MyView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CardioViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MePage.xaml.cs">
