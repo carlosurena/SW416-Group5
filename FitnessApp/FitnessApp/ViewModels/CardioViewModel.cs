@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace FitnessApp
 {
-    public class MeViewModel : BaseViewModel
+    public class CardioViewModel : BaseViewModel
     {
-        public MeViewModel()
+        public CardioViewModel()
         {
-            Title = "My Profile";
+            Title = "Cardio Workouts";
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }
