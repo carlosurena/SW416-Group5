@@ -14,7 +14,7 @@ namespace FitnessApp
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Workouts";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

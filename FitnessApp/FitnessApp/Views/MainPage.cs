@@ -8,38 +8,50 @@ namespace FitnessApp
     {
         public MainPage()
         {
-            Page itemsPage, aboutPage = null;
+            Page mePage, workoutsPage,cardioPage = null;
 
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage())
+                    mePage = new NavigationPage(new MePage())
                     {
-                        Title = "Browse"
+                        Title = "Me"
                     };
 
-                    aboutPage = new NavigationPage(new AboutPage())
+                    workoutsPage = new NavigationPage(new ItemsPage())
                     {
-                        Title = "About"
+                        Title = "Workouts"
                     };
-                    itemsPage.Icon = "tab_feed.png";
-                    aboutPage.Icon = "tab_about.png";
+
+                    cardioPage = new NavigationPage(new AboutPage())
+                    {
+                        Title = "Cardio"
+                    };
+                    mePage.Icon = "tab_feed.png";
+                    workoutsPage.Icon = "tab_about.png";
+                    cardioPage.Icon = "tab_about.png";
                     break;
                 default:
-                    itemsPage = new ItemsPage()
+                    mePage = new MePage()
                     {
-                        Title = "Browse"
+                        Title = "Me"
                     };
 
-                    aboutPage = new AboutPage()
+                    workoutsPage = new ItemsPage()
                     {
-                        Title = "About"
+                        Title = "Workouts"
+                    };
+                    cardioPage = new AboutPage()
+                    {
+                        Title = "Cardio"
                     };
                     break;
             }
 
-            Children.Add(itemsPage);
-            Children.Add(aboutPage);
+            Children.Add(mePage);
+            Children.Add(workoutsPage);
+            Children.Add(cardioPage);
+
 
             Title = Children[0].Title;
         }
