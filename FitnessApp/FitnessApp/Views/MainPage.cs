@@ -23,7 +23,7 @@ namespace FitnessApp
                         Title = "Workouts"
                     };
 
-                    cardioPage = new NavigationPage(new AboutPage())
+                    cardioPage = new NavigationPage(new CardioPage())
                     {
                         Title = "Cardio"
                     };
@@ -41,7 +41,7 @@ namespace FitnessApp
                     {
                         Title = "Workouts"
                     };
-                    cardioPage = new AboutPage()
+                    cardioPage = new CardioPage()
                     {
                         Title = "Cardio"
                     };

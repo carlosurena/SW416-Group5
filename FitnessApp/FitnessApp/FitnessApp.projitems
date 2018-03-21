@@ -33,10 +33,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MyView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CardioViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MePage.xaml.cs">
       <DependentUpon>MePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CardioPage.xaml.cs">
+      <DependentUpon>CardioPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -45,6 +50,10 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CardioPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
