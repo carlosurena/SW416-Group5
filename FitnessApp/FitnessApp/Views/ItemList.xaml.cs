@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 namespace FitnessApp
 {
-    public partial class ItemsPage : ContentView
+    public partial class ItemList : StackLayout
     {
-        ItemsViewModel viewModel;
-
-        public ItemsPage()
+        public ItemList()
         {
             InitializeComponent();
-
-            BindingContext = viewModel = new ItemsViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -34,12 +29,6 @@ namespace FitnessApp
             await Navigation.PushAsync(new NewItemPage());
         }
 
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
 
-        //    if (viewModel.Items.Count == 0)
-        //        viewModel.LoadItemsCommand.Execute(null);
-        //}
     }
 }

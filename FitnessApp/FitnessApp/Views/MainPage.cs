@@ -18,7 +18,7 @@ namespace FitnessApp
                         Title = "Me"
                     };
 
-                    workoutsPage = new NavigationPage(new ItemsPage())
+                    workoutsPage = new NavigationPage(new WorkoutPage())
                     {
                         Title = "Workouts"
                     };
@@ -37,7 +37,7 @@ namespace FitnessApp
                         Title = "Me"
                     };
 
-                    workoutsPage = new ItemsPage()
+                    workoutsPage = new WorkoutPage()
                     {
                         Title = "Workouts"
                     };
