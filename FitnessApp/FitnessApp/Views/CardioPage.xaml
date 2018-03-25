@@ -1,36 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitnessApp.CardioPage" xmlns:vm="clr-namespace:FitnessApp;" Title="{Binding Title}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FitnessApp.CardioPage" 
+             xmlns:vm="clr-namespace:FitnessApp;" 
+             Title="{Binding Title}">
+
     <ContentPage.BindingContext>
         <vm:CardioViewModel />
     </ContentPage.BindingContext>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
 
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                <Label FontSize="22">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Hello Xing!" FontAttributes="Bold" FontSize="22" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Here we will track our cardio progress." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="button with LINK!" Command="{Binding OpenWebCommand}" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End" Margin="0,20,0,-45">
+
+                    <Label FontSize="22">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Fitness Tracker" FontAttributes="Bold" FontSize="22" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                     
+                </StackLayout>
             </StackLayout>
-        </ScrollView>
-    </Grid>
+
+            <Grid>
+             
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" /> <!-- First row height-->
+                <RowDefinition Height="50" /> <!-- Second row height-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+          
+            <Button Margin="0,10,0,0" Text="Run"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="0" />
+            <Button Margin="0,10,0,0" Text="Walk"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="1" />
+            <Button Margin="0,10,0,0" Text="Bike"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="2" />
+         
+            </Grid>
+            <StackLayout Spacing="10" x:Name="layout">
+
+                <Label FontSize="50" HorizontalOptions="Center" Margin="0, 100, 0, 20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="159.32" FontAttributes="Bold" FontSize="50" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="22" HorizontalOptions="Center" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
+                <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black" Clicked="OnGoButtonClicked" />
+
+            </Grid>
+
+             
+
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
