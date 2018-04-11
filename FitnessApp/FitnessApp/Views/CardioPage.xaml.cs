@@ -11,5 +11,11 @@ namespace FitnessApp
         {
             InitializeComponent();
         }
+       
+        void OnGoButtonClicked(object sender, EventArgs args)
+        {
+            DisplayAlert("Alert", "Start?", "OK");
+        }
+
     }
 }

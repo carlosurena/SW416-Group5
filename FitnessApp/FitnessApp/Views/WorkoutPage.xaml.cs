@@ -21,6 +21,18 @@ namespace FitnessApp
             await Navigation.PushAsync(new NewItemPage());
         }
 
+        async void Me_Clicked(object sender, EventArgs e)
+        {
+            ItemList.IsVisible = true;
+            FeaturedPage.IsVisible = false;
+
+        }
+        async void Featured_Clicked(object sender, EventArgs e)
+        {
+            FeaturedPage.IsVisible = true;
+            ItemList.IsVisible = false;
+
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
