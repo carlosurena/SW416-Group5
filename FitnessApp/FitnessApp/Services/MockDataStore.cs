@@ -14,12 +14,12 @@ namespace FitnessApp
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Monday: Chest", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Tuesday: Back/Biceps", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Wednesday: Abs/Cardio", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Thursday: Shoulders", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Friday: Triceps", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Saturday: HIIT", Description="This is an item description." },
             };
 
             foreach (var item in mockItems)

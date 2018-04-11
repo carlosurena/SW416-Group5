@@ -12,10 +12,11 @@
 
     <StackLayout>
         <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Me" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
-            <Button Text="Featured" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
+            <Button Text="Me" Clicked="Me_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
+            <Button Text="Featured" Clicked="Featured_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
         </StackLayout>
-        <common:ItemList></common:ItemList>
+        <common:ItemList x:Name="ItemList" IsVisible="true"></common:ItemList>
+        <common:FeaturedPage x:Name="FeaturedPage" IsVisible="false"></common:FeaturedPage>
     </StackLayout>
 
 </ContentPage>

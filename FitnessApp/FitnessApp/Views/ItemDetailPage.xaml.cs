@@ -15,8 +15,8 @@ namespace FitnessApp
 
             var item = new Item
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Text = "Workout Name",
+                Description = "Description"
             };
 
             viewModel = new ItemDetailViewModel(item);
