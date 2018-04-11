@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace FitnessApp
 {
-    public partial class FeaturedPage : StackLayout
+    public partial class FeaturedPage : ScrollView
     {
         public FeaturedPage()
         {
