@@ -13,21 +13,17 @@ namespace FitnessApp
             InitializeComponent();
             BindingContext = viewModel = new MeViewModel();
         }
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NewItemPage());
-        }
 
-        async void Me_Clicked(object sender, EventArgs e)
+        async void Progress_Clicked(object sender, EventArgs e)
         {
-            ItemList.IsVisible = true;
-            FeaturedPage.IsVisible = false;
+            ProgressPage.IsVisible = true;
+            ProtectedPage.IsVisible = false;
 
         }
-        async void Featured_Clicked(object sender, EventArgs e)
+        async void Protected_Clicked(object sender, EventArgs e)
         {
-            FeaturedPage.IsVisible = true;
-            ItemList.IsVisible = false;
+            ProtectedPage.IsVisible = true;
+            ProgressPage.IsVisible = false;
 
         }
     }
