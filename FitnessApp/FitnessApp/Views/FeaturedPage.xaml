@@ -4,16 +4,53 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.FeaturedPage">
-        <StackLayout 
 
-             Orientation="Vertical"
-             HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
+    <StackLayout 
+    Orientation="Vertical"
+    HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
 
-          <Label Text="Featured Workouts" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
-          <BoxView BackgroundColor="black" HeightRequest="200" WidthRequest="100" />
-          <BoxView BackgroundColor="red" HeightRequest="200" WidthRequest="100" />
-          <BoxView BackgroundColor="orange" HeightRequest="200" WidthRequest="100" />
+        <Label Text="Featured Workouts" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
+        <StackLayout  Orientation="Vertical" BackgroundColor="#2cb3f7" HeightRequest="200" >
+            <Label 
+                Text="5-MINUTE ABS" 
+                FontSize="24" 
+                FontFamily="Helvetica Neue" 
+                TextColor="White" 
+                Margin="20"
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="CenterAndExpand">
+            </Label>
+            <Label 
+                Text="Abs" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="24"
+                FontFamily="Helvetica Neue"
+                TextColor="White"
+                FontAttributes="Bold"
+                VerticalOptions="StartAndExpand">
+                
+            </Label>
 
-    
-</StackLayout>
-    </ScrollView>
+
+        </StackLayout>
+        <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
+            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
+            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
+            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
+            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
+            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+
+        
+           
+    </StackLayout>
+</ScrollView>

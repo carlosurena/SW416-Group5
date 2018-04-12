@@ -51,6 +51,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\FeaturedPage.xaml.cs">
       <DependentUpon>FeaturedPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseList.xaml.cs">
+      <DependentUpon>ExerciseList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Exercise.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml.cs">
+      <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockExercises.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -82,5 +90,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
   </ItemGroup>
 </Project>

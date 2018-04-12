@@ -5,25 +5,13 @@ using System.Threading.Tasks;
 
 namespace FitnessApp
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockExercises : IDataStore<Item>
     {
-        List<Item> items;
         List<Item> exercises;
 
-        public MockDataStore()
+        public MockExercises()
         {
-            items = new List<Item>();
-
-            var mockItems = new List<Item>
-            {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Monday: Chest", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Tuesday: Back/Biceps", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Wednesday: Abs/Cardio", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Thursday: Shoulders", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Friday: Triceps", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Saturday: HIIT", Description="This is an item description." },
-            };
-
+            
             var mockExercises = new List<Item>
             {
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Bench Press", BodyPart="This is an item description." },
@@ -34,9 +22,9 @@ namespace FitnessApp
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Pull-up", BodyPart="This is an item description." },
             };
 
-            foreach (var item in mockItems)
+            foreach (var item in mockExercises)
             {
-                items.Add(item);
+                exercises.Add(item);
             }
             //foreach (var exercise in mockExercises)
             //{
@@ -46,7 +34,7 @@ namespace FitnessApp
 
         public async Task<bool> AddItemAsync(Item item)
         {
-            items.Add(item);
+            exercises.Add(item);
 
             return await Task.FromResult(true);
         }
@@ -55,9 +43,9 @@ namespace FitnessApp
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(_item);
-            items.Add(item);
+            var _item = exercises.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            exercises.Remove(_item);
+            exercises.Add(item);
 
             return await Task.FromResult(true);
         }
@@ -66,8 +54,8 @@ namespace FitnessApp
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(_item);
+            var _item = exercises.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            exercises.Remove(_item);
 
             return await Task.FromResult(true);
         }
@@ -75,13 +63,13 @@ namespace FitnessApp
 
         public async Task<Item> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(exercises.FirstOrDefault(s => s.Id == id));
         }
 
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(items);
+            return await Task.FromResult(exercises);
         }
 
     }

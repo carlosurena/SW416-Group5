@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:common="clr-namespace:FitnessApp"
-             x:Class="FitnessApp.ItemDetailPage" 
+             x:Class="FitnessApp.ExerciseDetailPage" 
              Title="{Binding Title}">
     
     <StackLayout Spacing="20" Padding="15">
 
-        <common:ItemList></common:ItemList>
+        <common:ExerciseList></common:ExerciseList>
     </StackLayout>
 </ContentPage>

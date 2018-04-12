@@ -9,7 +9,7 @@ namespace FitnessApp
     public partial class WorkoutPage : ContentPage
     {
         WorkoutViewModel viewModel;
-        Page meWorkout, featuredWorkouts = null;
+        //Page meWorkout, featuredWorkouts = null;
         public WorkoutPage()
         {
             InitializeComponent();
