@@ -2,12 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="FitnessApp.CardioPage" 
-             xmlns:vm="clr-namespace:FitnessApp;" 
-             Title="{Binding Title}">
+             xmlns:common="clr-namespace:FitnessApp"
 
-    <ContentPage.BindingContext>
-        <vm:CardioViewModel />
-    </ContentPage.BindingContext>
+             Title="{Binding Title}">
 
     <ContentPage.Content>
         <StackLayout>
@@ -28,11 +25,24 @@
                 </StackLayout>
             </StackLayout>
 
+
+            <StackLayout>
+        <StackLayout Padding="5,50, 0,5" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Run" Clicked="BtnRunClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115"></Button>
+            <Button Text="Walk" Clicked="BtnWalkClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115"></Button>
+            <Button Text="Bike" Clicked="BtnBikeClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115"></Button>
+        </StackLayout>
+        <common:RunPage x:Name="RunPage" IsVisible="true"></common:RunPage>
+        <common:WalkPage x:Name="WalkPage" IsVisible="false"></common:WalkPage>
+        <common:BikePage x:Name="BikePage" IsVisible="false"></common:BikePage>
+                        
+    </StackLayout>
+            <!--
             <Grid>
              
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" /> <!-- First row height-->
-                <RowDefinition Height="50" /> <!-- Second row height-->
+                <RowDefinition Height="50" /> 
+                <RowDefinition Height="50" /> 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -76,7 +86,7 @@
 
             </Grid>
 
-             
+             -->
 
         </StackLayout>
     </ContentPage.Content>
