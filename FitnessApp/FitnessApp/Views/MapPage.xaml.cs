@@ -11,11 +11,11 @@ namespace FitnessApp
         public MapPage()
         {
             InitializeComponent();
+           
             var l = new Label
             {
-                Text = "These buttons leave the current app and open the built-in Maps app for the platform"
+                Text = "This is a Map Page\r\n\r\nThese buttons leave the current app and open the built-in Maps app for the platform"
             };
-
             var openLocation = new Button
             {
                 Text = "Open location using built-in Maps app"
@@ -61,6 +61,7 @@ namespace FitnessApp
                 Padding = new Thickness(5, 20, 5, 0),
                 HorizontalOptions = LayoutOptions.Fill,
                 Children = {
+                    
                     l,
                     openLocation,
                     openDirections
