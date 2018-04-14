@@ -24,6 +24,11 @@ namespace FitnessApp
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
             });
+            MessagingCenter.Subscribe<AddExercisePage, Exercise>(this, "AddExercise", async (obj, item) =>
+            {
+                var _item = item as Exercise;
+                Data.ExerciseList.Add(_item);
+            });
         }
 
         async Task ExecuteLoadItemsCommand()

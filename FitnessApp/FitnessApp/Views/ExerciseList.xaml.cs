@@ -10,15 +10,17 @@ namespace FitnessApp
         public ExerciseList()
         {
             InitializeComponent();
+
+            ExerciseListView.ItemsSource = Data.ExerciseList;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
+            var exercise = args.SelectedItem as Exercise;
+            if (exercise == null)
                 return;
 
-            await Navigation.PushAsync(new ExerciseDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ExerciseDetailPage());
 
             // Manually deselect item
             ExerciseListView.SelectedItem = null;

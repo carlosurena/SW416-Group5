@@ -1,0 +1,14 @@
+[
+    {
+        "id":"42d32dc3-d7bf-487b-901d-0e58584c1a7f",
+        "name":"Bench Press",
+        "primaryBodyPart":"Chest",
+        "secondaryBodyPart":"Triceps"
+        },
+    {   
+        "id":"42d32dc3-d7bf-487b-901d-0e58584c1a7f",
+        "name":"Pull-Ups",
+        "primaryBodyPart":"Back",
+        "secondaryBodyPart":"Shoulders"
+    }
+]

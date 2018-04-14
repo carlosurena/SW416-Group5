@@ -4,8 +4,10 @@ namespace FitnessApp
 {
     public class Exercise
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string BodyPart { get; set; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string primaryBodyPart { get; set; }
+        public string secondaryBodyPart { get; set; }
+
     }
 }

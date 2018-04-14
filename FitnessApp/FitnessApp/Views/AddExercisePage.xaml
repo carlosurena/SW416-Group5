@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="FitnessApp.AddExercisePage" 
+    Title="Add Exercise">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Exercise Name" FontSize="Medium" />
+            <Entry Text="{Binding Exercise.name}" FontSize="Small" />
+            <Label Text="Primary Body Part" FontSize="Medium" />
+            <Entry Text="{Binding Exercise.primaryBodyPart}" FontSize="Small" />
+            <Label Text="Secondary Body Part" FontSize="Medium" />
+            <Entry Text="{Binding Exercise.secondaryBodyPart}" FontSize="Small" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

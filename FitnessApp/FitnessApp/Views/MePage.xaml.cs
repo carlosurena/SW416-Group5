@@ -11,5 +11,18 @@ namespace FitnessApp
         {
             InitializeComponent();
         }
+
+        async void Progress_Clicked(object sender, EventArgs e)
+        {
+            ProgressPage.IsVisible = true;
+            ProtectedPage.IsVisible = false;
+
+        }
+        async void Protected_Clicked(object sender, EventArgs e)
+        {
+            ProtectedPage.IsVisible = true;
+            ProgressPage.IsVisible = false;
+
+        }
     }
 }

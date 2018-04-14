@@ -4,9 +4,11 @@
              xmlns:common="clr-namespace:FitnessApp"
              x:Class="FitnessApp.ExerciseDetailPage" 
              Title="{Binding Title}">
+    <ContentPage.ToolbarItems>     
+        <ToolbarItem Text="New" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
     
     <StackLayout Spacing="20" Padding="15">
-
         <common:ExerciseList></common:ExerciseList>
     </StackLayout>
 </ContentPage>

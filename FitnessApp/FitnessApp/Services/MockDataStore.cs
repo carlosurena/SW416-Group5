@@ -8,7 +8,6 @@ namespace FitnessApp
     public class MockDataStore : IDataStore<Item>
     {
         List<Item> items;
-        List<Item> exercises;
 
         public MockDataStore()
         {
@@ -24,15 +23,7 @@ namespace FitnessApp
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Saturday: HIIT", Description="This is an item description." },
             };
 
-            var mockExercises = new List<Item>
-            {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Bench Press", BodyPart="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Back Squat", BodyPart="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Dumbbell Lunges", BodyPart="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Lateral Raises", BodyPart="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Military Press", BodyPart="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Pull-up", BodyPart="This is an item description." },
-            };
+
 
             foreach (var item in mockItems)
             {

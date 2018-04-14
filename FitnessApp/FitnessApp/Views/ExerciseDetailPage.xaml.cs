@@ -29,5 +29,10 @@ namespace FitnessApp
 
             BindingContext = this.viewModel = viewModel;
         }
+
+        async void AddItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddExercisePage());
+        }
     }
 }
