@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitnessApp.WalkPage"
+
+             HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
+    <Label FontSize="50" HorizontalOptions="Center" Margin="0, 20, 0, 20">
+        <Label.FormattedText>
+            <FormattedString>
+                <FormattedString.Spans>
+                    <Span Text="By walking, you got:" FontAttributes="Bold" FontSize="22" />
+                </FormattedString.Spans>
+            </FormattedString>
+        </Label.FormattedText>
+    </Label>
+
+    <Image Source="Walk.png" HeightRequest="100"></Image>
+
+
+    <StackLayout Spacing="10" x:Name="layout">
+
+                <Label FontSize="50" HorizontalOptions="Center" Margin="0, 0, 0, 20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="19.32" FontAttributes="Bold" FontSize="50" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="22" HorizontalOptions="Center" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
+        <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"  Clicked="BtnWalkClicked"/>
+
+            </Grid>
+    </StackLayout>
