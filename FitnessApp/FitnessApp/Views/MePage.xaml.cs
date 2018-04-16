@@ -7,9 +7,11 @@ namespace FitnessApp
 {
     public partial class MePage : ContentPage
     {
+        MeViewModel viewModel;
         public MePage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new MeViewModel();
         }
 
         async void Progress_Clicked(object sender, EventArgs e)
