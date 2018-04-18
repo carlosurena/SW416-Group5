@@ -15,7 +15,8 @@ namespace FitnessApp
             Item = new Item
             {
                 Text = "Item name",
-                Description = "This is an item description."
+                Day = "Someday",
+                Description = "Item Description"
             };
 
             BindingContext = this;

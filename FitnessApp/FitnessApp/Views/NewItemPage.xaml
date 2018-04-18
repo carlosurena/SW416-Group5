@@ -8,7 +8,17 @@
             <Label Text="Workout Name" FontSize="Medium" />
             <Entry Text="{Binding Item.Text}" FontSize="Small" />
             <Label Text="Day" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
+            <Picker x:Name="DayPicker" SelectedItem="{Binding Item.Day}" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                <x:String>Monday</x:String> 
+                <x:String>Tuesday</x:String>
+                <x:String>Wednesday</x:String>
+                <x:String>Thursday</x:String> 
+                <x:String>Friday</x:String>
+                <x:String>Saturday</x:String>
+                <x:String>Sunday</x:String>
+            </Picker.Items>
+    </Picker> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

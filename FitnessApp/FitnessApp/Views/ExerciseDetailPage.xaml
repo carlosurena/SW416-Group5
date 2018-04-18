@@ -11,7 +11,29 @@
             <Label Text="{Binding Exercise.primaryBodyPart}" HorizontalTextAlignment="Center" FontSize="Small" />
             <Label Text="{Binding Exercise.secondaryBodyPart}" HorizontalTextAlignment="Center" FontSize="Small" />
 
-            
+            <StackLayout>
+                <Grid x:Name="WorkoutGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Set" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="Weight" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="Reps" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" />
+                    <Label Text="1" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
+                    <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="1"></Entry>
+                    <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="2"></Entry>
+                     <Button Text="+" Clicked="AddSet_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" Grid.Row="2" Grid.Column="2"></Button>
+
+                </Grid>
+                
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

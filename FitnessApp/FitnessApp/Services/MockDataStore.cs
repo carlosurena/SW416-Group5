@@ -15,12 +15,12 @@ namespace FitnessApp
 
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Monday: Chest", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Tuesday: Back/Biceps", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Wednesday: Abs/Cardio", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Thursday: Shoulders", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Friday: Triceps", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Saturday: HIIT", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Chest", Description="This is an item description.", Day = "Monday" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Back/Biceps", Description="This is an item description.", Day = "Tuesday" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Abs/Cardio", Description="This is an item description.", Day = "Wednesday" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Shoulders", Description="This is an item description.", Day = "Thursday" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Triceps", Description="This is an item description.", Day = "Friday" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "HIIT", Description="This is an item description.", Day = "Saturday" },
             };
 
 

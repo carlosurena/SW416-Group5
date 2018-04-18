@@ -37,12 +37,14 @@ namespace FitnessApp
         }
 
 
-        async void Save_Clicked(object sender, EventArgs e)
+        async void AddSet_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddExercise", Exercise);
+            //MessagingCenter.Send(this, "AddExercise", Exercise);
+            WorkoutGrid.RowDefinitions.Insert(1,new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //WorkoutGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
-            Data.ExerciseList.Add(Exercise);
-            await Navigation.PopAsync();
+
+            //await Navigation.PopAsync();
         }
     }
 }
