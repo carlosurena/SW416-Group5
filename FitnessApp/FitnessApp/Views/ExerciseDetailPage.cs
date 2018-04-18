@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace FitnessApp
 {
-    public partial class AddExercisePage : ContentPage
+    public partial class ExerciseDetailPage : ContentPage
     {
         public Exercise Exercise { get; set; }
 
-        public AddExercisePage()
+        public ExerciseDetailPage()
         {
             InitializeComponent();
 
@@ -21,6 +21,21 @@ namespace FitnessApp
 
             BindingContext = this;
         }
+
+        public ExerciseDetailPage(Exercise exercise)
+        {
+            InitializeComponent();
+
+            Exercise = new Exercise
+            {
+                name = exercise.name,
+                primaryBodyPart = exercise.primaryBodyPart,
+                secondaryBodyPart = exercise.secondaryBodyPart
+            };
+
+            BindingContext = this;
+        }
+
 
         async void Save_Clicked(object sender, EventArgs e)
         {

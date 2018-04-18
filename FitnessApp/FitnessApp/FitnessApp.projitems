@@ -55,8 +55,8 @@
       <DependentUpon>ExerciseList.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Exercise.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml.cs">
-      <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseOverviewPage.cs">
+      <DependentUpon>ExerciseOverviewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\MockExercises.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ProgressPage.xaml.cs">
@@ -80,6 +80,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.cs">
+      <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +119,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseOverviewPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProgressPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -142,5 +145,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
   </ItemGroup>
 </Project>
