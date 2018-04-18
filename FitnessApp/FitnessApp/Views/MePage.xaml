@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitnessApp.MePage" xmlns:vm="clr-namespace:FitnessApp;" Title="{Binding Title}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FitnessApp.MePage" 
+             xmlns:common="clr-namespace:FitnessApp"
+             xmlns:vm="clr-namespace:FitnessApp;" 
+             Title="{Binding Title}">
 
     <StackLayout>
         <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Progress" Clicked="Me_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
-            <Button Text="Protected" Clicked="Featured_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
+            <Button Text="Progress" Clicked="Progress_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
+            <Button Text="Protected" Clicked="Protected_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
         </StackLayout>
-        <common:ItemList x:Name="ProgressPage" IsVisible="true"></common:ItemList>
-        <common:FeaturedPage x:Name="ProtectedPage" IsVisible="false"></common:FeaturedPage>
+        <common:ProgressPage x:Name="ProgressPage" IsVisible="true"></common:ProgressPage>
+        <common:ProtectedPage x:Name="ProtectedPage" IsVisible="false"></common:ProtectedPage>
     </StackLayout>
 </ContentPage>

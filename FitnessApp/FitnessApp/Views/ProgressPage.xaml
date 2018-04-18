@@ -5,8 +5,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.ProgressPage">
 
-    <StackLayout Orientation="Vertical"         HorizontalOptions="FillAndExpand" Padding="10">         <Image Source="xamarin_logo"                 VerticalOptions="Center" HeightRequest="64" />         <Label Text="Sarah Kurtz" FontSize="28" HorizontalOptions="Center"                VerticalOptions="Center" FontAttributes="Bold" />         <Label Text="Profile" HorizontalOptions="Center"                 VerticalOptions="CenterAndExpand" />     </StackLayout>          <StackLayout Orientation="Horizontal">                    <Label FontSize="14" Text="Sex:"                HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />           <Entry HorizontalOptions="FillAndExpand" Text="Female" />     </StackLayout>      <StackLayout Orientation="Horizontal">           <Label FontSize="14" Text="Age:"  HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />           <Entry HorizontalOptions="FillAndExpand" Text="21"  />         <Label Text="Progress" FontAttributes="Bold"                 VerticalOptions="CenterAndExpand" />         <ProgressBar x:Name="progressBar1" IsIndeterminate="False" Value="20" Maximum="100" Margin="0,12"/>     </StackLayout>
-    
+    <StackLayout Orientation="Vertical"
+                 HorizontalOptions="FillAndExpand" 
+                 Padding="10" BackgroundColor="White">
+
+        <Label Text="Sarah Kurtz" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
+        <Label Text="Profile" FontSize="20" HorizontalOptions="Center" />
+
+        <StackLayout  Orientation="Vertical" Padding="0,0,0,10">
+            <Label 
+                Text="Sex:" FontSize="20" 
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="Female"/> 
+            <Label 
+                Text="Age:" FontSize="20" 
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="21"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" HeightRequest="200">
+            <Label Text="Progress" FontSize="20" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </StackLayout>
 </ScrollView>
 
 
