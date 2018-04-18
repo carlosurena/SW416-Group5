@@ -4,8 +4,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.ProtectedPage">
-
-<<<<<<< HEAD
+            
     <StackLayout Spacing="20" Padding="20" VerticalOptions="Center">
         <Entry Placeholder="Enter Password" Text="{Binding Password}" IsPassword="true"/>
         <Button Text="Login" TextColor="White" BackgroundColor="#2cb3f7" Command="{Binding LoginCommand}"/>
@@ -19,59 +18,3 @@
     
 
 
-
-=======
-    <StackLayout 
-    Orientation="Vertical"
-    HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
-
-        <Label Text="Featured Workouts" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
-
-        <StackLayout  Orientation="Vertical" BackgroundColor="#2cb3f7" HeightRequest="200" >
-        </StackLayout>
-       
-    </StackLayout>
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-       
-        <StackLayout>
-        </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="16,10,1,10" Spacing="10">
-                <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Progress" FontSize="15" BorderColor="#2cb3f7" BorderWidth="1" WidthRequest="100">
-                    </Button>
-                    <Button Text="Protected" FontSize="15" BorderColor="#2cb3f7" BorderWidth="1" WidthRequest="100">
-                    </Button>
-                </StackLayout>
-                <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
-          <Label Text="Sarah Kurtz" FontSize="28" HorizontalOptions="Center"
-            VerticalOptions="Center" FontAttributes="Bold" />
-          <Label Text="Profile"
-             HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
-          <Label FontSize="14" Text="Sex:"
-          HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-          <Entry HorizontalOptions="FillAndExpand" Text="Female" />
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
-          <Label FontSize="14" Text="Age:"  HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
-          <Entry HorizontalOptions="FillAndExpand" Text="21"  />
-        </StackLayout>
-                <StackLayout>
-                    <Label Text="Progress" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
-               <ProgressBar x:Name="progressBar1" Progress="1" Scale="5" WidthRequest="77" HorizontalOptions="End" Margin="20,20"/>
-                <ProgressBar x:Name="progressBar2" Progress="1" Scale="5" WidthRequest="77" HorizontalOptions="End" Margin="20,20"/>
-                <ProgressBar x:Name="progressBar3" Progress="1" Scale="5" WidthRequest="77" HorizontalOptions="End" Margin="20,20"/>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
-    </Grid>
-    
-</ScrollView>
->>>>>>> 76a45fe435e90b3bdb8d97c34bef2d2b88138d9a
