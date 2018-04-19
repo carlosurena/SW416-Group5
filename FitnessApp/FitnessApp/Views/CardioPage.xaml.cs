@@ -14,6 +14,8 @@ namespace FitnessApp
         public CardioPage()
         {
             InitializeComponent();
+            BindingContext =  new CardioViewModel();
+            BtnRun.BackgroundColor = Color.LightGreen;
         }
 
         /*   async void OnGoButtonClicked(object sender, EventArgs args)
