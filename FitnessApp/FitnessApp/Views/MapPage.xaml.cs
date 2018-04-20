@@ -1,74 +1,59 @@
 ﻿using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace FitnessApp
 {
     public partial class MapPage : ContentPage
     {
+        Map map;
+
         public MapPage()
         {
             InitializeComponent();
 
-            var l = new Label
+
+            var map = new Map(
+            MapSpan.FromCenterAndRadius(
+                    new Position(41.158853, -73.257352), Distance.FromMiles(0.3)))//location of Fairfield University
             {
-                Text = "This is a Map Page\r\n\r\nThese buttons leave the current app and open the built-in Maps app for the platform"
+                IsShowingUser = true,
+                HeightRequest = 250,
+                VerticalOptions = LayoutOptions.Center
             };
-            var openLocation = new Button
-            {
-                Text = "Open location using built-in Maps app"
-            };
-            openLocation.Clicked += (sender, e) => {
-
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    //https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
-                    Device.OpenUri(new Uri("http://maps.apple.com/?q=394+Pacific+Ave+San+Francisco+CA"));
-                }
-                else if (Device.RuntimePlatform == Device.Android)
-                {
-                    // opens the Maps app directly
-                    Device.OpenUri(new Uri("geo:0,0?q=394+Pacific+Ave+San+Francisco+CA"));
-
-                }
-
-            };
-
-            var openDirections = new Button
-            {
-                Text = "Get directions using built-in Maps app"
-            };
-            openDirections.Clicked += (sender, e) => {
-
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    //https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
-                    Device.OpenUri(new Uri("http://maps.apple.com/?daddr=San+Francisco,+CA&saddr=cupertino"));
-
-                }
-                else if (Device.RuntimePlatform == Device.Android)
-                {
-                    // opens the 'task chooser' so the user can pick Maps, Chrome or other mapping app
-                    Device.OpenUri(new Uri("http://maps.google.com/?daddr=San+Francisco,+CA&saddr=Mountain+View"));
-
-                }
-
-            };
-            Content = new StackLayout
-            {
-                Padding = new Thickness(5, 20, 5, 0),
-                HorizontalOptions = LayoutOptions.Fill,
-                Children = {
-
-                    l,
-                    openLocation,
-                    openDirections
-                }
-            };
+            map.MapType = MapType.Street;
+            var stack = new StackLayout { Spacing = 0 };
+            stack.Children.Add(map);
+            Content = stack;
         }
 
+        /*
+        map = new Map
+            {
+                //IsShowingUser = true,
+                HeightRequest = 250,
+                // WidthRequest = 960,
+                VerticalOptions = LayoutOptions.Center
+            };
 
-    }
+            map.MoveToRegion(new MapSpan(new Position(0, 0), 360, 360));
+
+
+
+            // create map style buttons
+
+            map.MapType = MapType.Street;
+
+            // put the page together
+            var stack = new StackLayout { Spacing = 0 };
+            stack.Children.Add(map);
+
+            Content = stack;
+        }*/
+       
+    } 
 }

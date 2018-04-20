@@ -15,7 +15,7 @@ namespace FitnessApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             FormsMaps.Init();
-    
+            global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
 
 
