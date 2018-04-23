@@ -38,7 +38,7 @@ namespace FitnessApp
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
-
+            await App.Database.SaveItemAsync(item);
             return await Task.FromResult(true);
         }
 

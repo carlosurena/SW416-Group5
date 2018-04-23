@@ -35,10 +35,12 @@ namespace FitnessApp
 
             try
             {
+                
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await App.Database.GetItemsAsync();
                 foreach (var item in items)
                 {
+                    Debug.WriteLine("Adding: " + item.Text + " to DB... ID = "+item.ID);
                     Items.Add(item);
                 }
             }
