@@ -1,8 +1,29 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="FitnessApp.MapPage">
- 
-    <Label Text="THIS IS A MapPage"></Label>
- 
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    x:Class="FitnessApp.MapPage">
+
+    <StackLayout>
+        <StackLayout   >
+            <maps:Map  HeightRequest="200"
+            x:Name="MyMap"
+            IsShowingUser="true"
+            MapType="Street"
+        />
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="00:00"
+                       FontSize="50"
+                       HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
+                <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

@@ -1,26 +1,40 @@
 ﻿using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Reactive.Disposables;
+using System.Reactive.Linq;
+using Prism.Navigation;
+using Prism.Services;
+using Reactive.Bindings;
+using Reactive.Bindings.Extensions;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
 using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using System.Reactive.Concurrency;
 
 namespace FitnessApp
 {
     public partial class MapPage : ContentPage
-    {
+    {/*
         Map map;
         Timer timer;
         int mins = 0, secs = 0, milliseconds = 1;
-
+*/
         public MapPage()
         {
             InitializeComponent();
 
+            //Map location
+            MyMap.MoveToRegion(
+             MapSpan.FromCenterAndRadius(
+             new Position(41.158853, -73.257352), Distance.FromMiles(0.3)));
 
+
+            /*
             var map = new Map(
             MapSpan.FromCenterAndRadius(
                     new Position(41.158853, -73.257352), Distance.FromMiles(0.3)))//location of Fairfield University
@@ -110,9 +124,25 @@ namespace FitnessApp
         };
             
             Content = stackMap;
+*/
 
-         }
-    
 
+
+
+        }
+        public void BtnStartClicked(object sender, EventArgs e)
+        {
+            if (BtnStart.Text == "Start")
+            {
+                BtnStart.Text = "Pause";
+            }
+            else
+                BtnStart.Text = "Start";
+
+        }
+        public void BtnStopClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "Are you sure you're going to Stop? ", "Yes", "No");
+        }
     }
 }
