@@ -14,6 +14,7 @@ namespace FitnessApp
 
             Item = new Item
             {
+                ID = 0,
                 Text = "Item name",
                 Day = "Someday",
                 Description = "Item Description"

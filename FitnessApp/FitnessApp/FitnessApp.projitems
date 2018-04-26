@@ -86,6 +86,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\WorkoutDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ExerciseDetailViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />

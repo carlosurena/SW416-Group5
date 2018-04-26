@@ -12,6 +12,7 @@ namespace FitnessApp
         public string Text { get; set; }
         public string Description { get; set; }
         public string Day { get; set; }
-        //public ObservableCollection<Exercise> exerciseList { get; set; }
+        [Ignore]
+        public ObservableCollection<Exercise> exerciseList { get; set; }
     }
 }
