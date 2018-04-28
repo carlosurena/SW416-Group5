@@ -13,16 +13,39 @@
         />
         </StackLayout>
 
+        <Grid>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="50" />                
+    <RowDefinition Height="30" />
+    <RowDefinition Height="50" />
+    <RowDefinition Height="30" />
+    <RowDefinition Height="50" />
+  </Grid.RowDefinitions>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
+  </Grid.ColumnDefinitions>
+  <Label Text="Duration" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDuration" Grid.Row="1" Grid.Column="0" />
+  <Label Text="Distance" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDistance" Grid.Row="1" Grid.Column="1" />
+  <Label Text="00:00:00" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblStopWatch" Grid.Row="2" Grid.Column="0" />
+  <Label Text="0 KM" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDistanceKM" Grid.Row="2" Grid.Column="1" />
+  <Label Text="Calories" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="0" />
+  <Label Text="Heart Rate" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="1" />
+  <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblCalories"  Grid.Row="4" Grid.Column="0" />
+  <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblHeartRate" Grid.Row="4" Grid.Column="1" />
+
+
+  </Grid>
+        
         <StackLayout>
-            <Label Text="00:00:00"
-                       FontSize="50"
-                       HorizontalOptions="CenterAndExpand" x:Name="lblStopWatch"/>
+             
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
                 <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
 
 
             </StackLayout>
+           
 
         </StackLayout>
     </StackLayout>
