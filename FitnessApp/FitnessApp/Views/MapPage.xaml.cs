@@ -9,6 +9,7 @@ using Prism.Services;
 using Reactive.Bindings;
 using Reactive.Bindings.Extensions;
 using System.Diagnostics;
+using System.Threading;
 using System.Globalization;
 using System.Threading.Tasks;
 using System.Timers;
@@ -24,108 +25,19 @@ namespace FitnessApp
         Timer timer;
         int mins = 0, secs = 0, milliseconds = 1;
 */
+        Stopwatch stopWatch = new Stopwatch();
+
         public MapPage()
         {
             InitializeComponent();
 
             //Map location
+
             MyMap.MoveToRegion(
-             MapSpan.FromCenterAndRadius(
-             new Position(41.158853, -73.257352), Distance.FromMiles(0.3)));
-
-
-            /*
-            var map = new Map(
             MapSpan.FromCenterAndRadius(
-                    new Position(41.158853, -73.257352), Distance.FromMiles(0.3)))//location of Fairfield University
-            {
-                IsShowingUser = true,
-                HeightRequest = 250,
-                VerticalOptions = LayoutOptions.Center
-            };
-            map.MapType = MapType.Street;
-
-
-
-            //Add Stopwatch
-
-
-            Label lblTimer = new Label
-            {
-                IsVisible = true,
-                Text = "00:00:000",
-                FontSize = 50,
-                HorizontalOptions = LayoutOptions.Center
-            };
-
-
-            Button btnStart = new Button
-            {
-                IsVisible = true,
-                Text = "Start",
-                FontSize=25,
-                TextColor = Color.White,
-                BackgroundColor = Color.DeepSkyBlue,
-                HorizontalOptions = LayoutOptions.Center,
-                WidthRequest = 100,
-                HeightRequest = 100,
-                BorderRadius = 50
-
-            };
-
-            Button btnStop = new Button
-            {
-                IsVisible = true,
-                Text = "Stop",
-                FontSize = 25,
-                TextColor = Color.White,
-                BackgroundColor = Color.DeepSkyBlue,
-                WidthRequest = 100,
-                HeightRequest = 100,
-                BorderRadius = 50
-            };
-
-            Button btnPause = new Button
-            {
-                IsVisible = true,
-                Text = "Pause",
-                FontSize = 25,
-                TextColor = Color.White,
-                BackgroundColor = Color.DeepSkyBlue,
-                WidthRequest = 100,
-                HeightRequest=100,
-                BorderRadius=50
-                
-            };
-
-            var stackMap = new StackLayout
-            {
-                Spacing = 0,
-                Children =
-                {
-                    map,
-                    lblTimer,
-
-                    new StackLayout
-                    {
-                        Spacing = 0,
-                        Orientation = StackOrientation.Horizontal,
-                        HorizontalOptions = LayoutOptions.Center,
-                        Padding= new Thickness(20, 10, 20, 10),
-                        Children =
-                        {
-                            btnStart,
-                            btnStop,
-                            btnPause
-                        }
-                   }
-                   }
-      
-        };
-            
-            Content = stackMap;
-*/
-
+                    new Position(37.785813, -122.406654), Distance.FromMiles(1)));
+                 
+         
 
 
 
@@ -134,7 +46,16 @@ namespace FitnessApp
         {
             if (BtnStart.Text == "Start")
             {
+                stopWatch.Start();
+                // Get the elapsed time as a TimeSpan value.
+                TimeSpan ts = stopWatch.Elapsed;
+
+                // Format and display the TimeSpan value.
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
+                    ts.Hours, ts.Minutes, ts.Seconds);
+                lblStopWatch.Text = elapsedTime;
                 BtnStart.Text = "Pause";
+
             }
             else
                 BtnStart.Text = "Start";
@@ -142,6 +63,10 @@ namespace FitnessApp
         }
         public void BtnStopClicked(object sender, EventArgs e)
         {
+            stopWatch.Stop();
+            lblStopWatch.Text ="00:00:00";
+
+
             DisplayAlert("Alert", "Are you sure you're going to Stop? ", "Yes", "No");
         }
     }

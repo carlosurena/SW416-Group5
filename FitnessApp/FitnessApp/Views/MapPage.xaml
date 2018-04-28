@@ -14,9 +14,9 @@
         </StackLayout>
 
         <StackLayout>
-            <Label Text="00:00"
+            <Label Text="00:00:00"
                        FontSize="50"
-                       HorizontalOptions="CenterAndExpand" />
+                       HorizontalOptions="CenterAndExpand" x:Name="lblStopWatch"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
                 <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
