@@ -9,6 +9,8 @@ namespace FitnessApp
         {
             Title = item?.Text;
             Item = item;
+
         }
+
     }
 }

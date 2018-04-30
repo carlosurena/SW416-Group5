@@ -1,38 +1,59 @@
 ﻿using System;
-
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace FitnessApp
 {
     public partial class ExerciseOverviewPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        WorkoutViewModel viewModel;
+        ObservableCollection<Exercise> ExerciseList = new ObservableCollection<Exercise>();
 
-        // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public ExerciseOverviewPage()
         {
             InitializeComponent();
 
-            var item = new Item
+            var Exercise = new Exercise
             {
-                Text = "Workout Name",
-                Description = "Description"
+                name = "Exercise name",
+                ItemID = 1,
+                primaryBodyPart = "Primary Body Part",
+                secondaryBodyPart = "Secondary Body Part"
             };
 
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
+
+            //viewModel = new ExerciseDetailViewModel(Exercise);
+            //BindingContext = viewModel;
         }
 
-        public ExerciseOverviewPage(ItemDetailViewModel viewModel)
+        public ExerciseOverviewPage(WorkoutViewModel viewModel)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = viewModel;
+            ExerciseList = viewModel.Exercises;
+            Debug.WriteLine("Size of eList is: " + ExerciseList.Count);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (viewModel.Exercises.Count == 0)
+                viewModel.LoadExercisesCommand.Execute(null);
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddExercisePage());
+        }
+
+        async void DeleteWorkout_Clicked(object sender, EventArgs e)
+        {
+
+            await App.Database.DeleteItemAsync(viewModel.ParentItem);
+            viewModel.Exercises.Clear();
+            await Navigation.PopAsync();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace FitnessApp
 
             Exercise = new Exercise
             {
+                ItemID = 1,
                 name = "Exercise name",
                 primaryBodyPart = "Primary Body Part",
                 secondaryBodyPart = "Secondary Body Part"
@@ -25,8 +26,8 @@ namespace FitnessApp
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddExercise", Exercise);
-
-            Data.ExerciseList.Add(Exercise);
+            //await App.Database.SaveExerciseAsync(Exercise);
+            //Data.ExerciseList.Add(Exercise);
             await Navigation.PopAsync();
         }
     }

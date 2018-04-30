@@ -9,6 +9,7 @@
     </ContentPage.ToolbarItems>
     
     <StackLayout Spacing="20" Padding="15">
+        <Button Text="DELETE WORKOUT" Clicked="DeleteWorkout_Clicked"></Button>
         <common:ExerciseList></common:ExerciseList>
     </StackLayout>
 </ContentPage>

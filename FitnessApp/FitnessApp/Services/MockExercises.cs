@@ -14,12 +14,12 @@ namespace FitnessApp
             
             var mockExercises = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Bench Press", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Back Squat", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Dumbbell Lunges", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Lateral Raises", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Military Press", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Pull-up", Description="This is an item description." },
+                new Item { ID = 1, Text = "Bench Press", Description="This is an item description." },
+                new Item { ID = 2, Text = "Back Squat", Description="This is an item description." },
+                new Item { ID = 3, Text = "Dumbbell Lunges", Description="This is an item description." },
+                new Item { ID = 4, Text = "Lateral Raises", Description="This is an item description." },
+                new Item { ID = 5, Text = "Military Press", Description="This is an item description." },
+                new Item { ID = 6, Text = "Pull-up", Description="This is an item description." },
             };
 
             foreach (var item in mockExercises)
@@ -43,7 +43,7 @@ namespace FitnessApp
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            var _item = exercises.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            var _item = exercises.Where((Item arg) => arg.ID == item.ID).FirstOrDefault();
             exercises.Remove(_item);
             exercises.Add(item);
 
@@ -52,18 +52,18 @@ namespace FitnessApp
 
 
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeleteItemAsync(int id)
         {
-            var _item = exercises.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            var _item = exercises.Where((Item arg) => arg.ID == id).FirstOrDefault();
             exercises.Remove(_item);
 
             return await Task.FromResult(true);
         }
 
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<Item> GetItemAsync(int id)
         {
-            return await Task.FromResult(exercises.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(exercises.FirstOrDefault(s => s.ID == id));
         }
 
 

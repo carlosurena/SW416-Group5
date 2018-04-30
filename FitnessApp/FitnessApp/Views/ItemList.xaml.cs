@@ -18,7 +18,7 @@ namespace FitnessApp
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ExerciseOverviewPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ExerciseOverviewPage(new WorkoutViewModel(item)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;
