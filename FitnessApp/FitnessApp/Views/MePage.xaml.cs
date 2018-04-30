@@ -22,6 +22,7 @@ namespace FitnessApp
         {
             ProgressPage.IsVisible = false;
             await DisplayAlert ("Password", "Enter Password", "Submit", "Cancel");
+
             ProtectedPage.IsVisible = true;
 
         }

@@ -12,7 +12,7 @@
         <Label Text="Featured Workouts" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
         <StackLayout  Orientation="Vertical" BackgroundColor="#2cb3f7" HeightRequest="200" >
             <Label 
-                Text="5-MINUTE ABS" 
+                Text="The Rock's Workout Series: Legs" 
                 FontSize="24" 
                 FontFamily="Helvetica Neue" 
                 TextColor="White" 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<ContentPage
+<StackLayout
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.ProtectedPage"
-             xmlns:custom="clr-namespace:FitnessApp.Controls">
+             xmlns:custom= "clr-namespace:FitnessApp.Controls"   >
 
-    <ContentPage.Content>
+    <StackLayout>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition
@@ -19,6 +19,7 @@
                     Height="Auto">
                 </RowDefinition>
             </Grid.RowDefinitions>
+            
             <Image
                 Source="{Binding PreviewImage}"
                 Grid.Row="0">
@@ -46,11 +47,11 @@
                 Command="{Binding CameraCommand}">
             </Button>
         </Grid>
-    </ContentPage.Content>
+    </StackLayout>
 
    
         
-</ContentPage>
+</StackLayout>
 
 
 

@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace FitnessApp
 {
-    public partial class ProtectedPage : ContentPage
+    public partial class ProtectedPage : StackLayout
     {
         public ProtectedPage()
         {
