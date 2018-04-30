@@ -84,6 +84,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.cs">
       <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProtectedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IImageResize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GalleryImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ImageGallery.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -146,5 +150,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ namespace FitnessApp
             InitializeComponent();
         }
 
-        async void Progress_Clicked(object sender, EventArgs e)
+        void Progress_Clicked(object sender, EventArgs e)
         {
             ProgressPage.IsVisible = true;
             ProtectedPage.IsVisible = false;
@@ -20,8 +20,9 @@ namespace FitnessApp
         }
         async void Protected_Clicked(object sender, EventArgs e)
         {
-            ProtectedPage.IsVisible = true;
             ProgressPage.IsVisible = false;
+            await DisplayAlert ("Password", "Enter Password", "Submit", "Cancel");
+            ProtectedPage.IsVisible = true;
 
         }
     }
