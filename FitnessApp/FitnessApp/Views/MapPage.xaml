@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="FitnessApp.MapPage">
-
+    <ContentPage.Content>
     <StackLayout>
         <StackLayout   >
             <maps:Map  HeightRequest="200"
@@ -49,4 +49,5 @@
 
         </StackLayout>
     </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

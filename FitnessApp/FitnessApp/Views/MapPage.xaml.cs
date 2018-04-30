@@ -20,11 +20,7 @@ using System.Reactive.Concurrency;
 namespace FitnessApp
 {
     public partial class MapPage : ContentPage
-    {/*
-        Map map;
-        Timer timer;
-        int mins = 0, secs = 0, milliseconds = 1;
-*/
+    { 
         Stopwatch stopWatch = new Stopwatch();
 
         public MapPage()
@@ -35,12 +31,28 @@ namespace FitnessApp
 
             MyMap.MoveToRegion(
             MapSpan.FromCenterAndRadius(
-                    new Position(37.785813, -122.406654), Distance.FromMiles(1)));
-                 
-         
+                    new Position(37.785813, -122.406654), Distance.FromMiles(0.5)));
 
 
+            //Add pins on map
+            var position = new Position(37.781751, -122.410005); // Latitude, Longitude
+            var pin = new Pin
+            {
+                Type = PinType.Place,
+                Position = position,
+                Label = "Rest Area - Dottie's True Blue Cafe",
+                Address = "28 6th St, San Francisco, CA 94103",
+            };
+            MyMap.Pins.Add(pin);
 
+            //Polyline
+            /*
+            MyMap.Add(new Position(37.782249, -122.410636));
+            MyMap.Add(new Position(37.781683, -122.415513));
+            MyMap.Add(new Position(37.783555, -122.415908));
+            MyMap.Add(new Position(37.784151, -122.410966));
+            MyMap.
+            */
         }
         public void BtnStartClicked(object sender, EventArgs e)
         {
