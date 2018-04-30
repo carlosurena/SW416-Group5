@@ -47,5 +47,13 @@ namespace FitnessApp
         {
             await Navigation.PushAsync(new AddExercisePage());
         }
+
+        async void DeleteWorkout_Clicked(object sender, EventArgs e)
+        {
+
+            await App.Database.DeleteItemAsync(viewModel.ParentItem);
+            viewModel.Exercises.Clear();
+            await Navigation.PopAsync();
+        }
     }
 }
