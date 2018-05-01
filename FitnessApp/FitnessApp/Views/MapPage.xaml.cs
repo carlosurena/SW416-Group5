@@ -14,46 +14,62 @@ using System.Globalization;
 using System.Threading.Tasks;
 using System.Timers;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
+using Xamarin.Forms.GoogleMaps;
 using System.Reactive.Concurrency;
+using System.Linq;
 
 namespace FitnessApp
 {
     public partial class MapPage : ContentPage
-    { 
+    {
         Stopwatch stopWatch = new Stopwatch();
-
+        Polyline polyline = null;
         public MapPage()
         {
             InitializeComponent();
 
+
             //Map location
 
-            MyMap.MoveToRegion(
+            map.MoveToRegion(
             MapSpan.FromCenterAndRadius(
-                    new Position(41.158744,-73.256815), Distance.FromMiles(0.3)));
-
+                    new Position(41.158744, -73.256815), Distance.FromMiles(0.3)));
 
             //Add pins on map
-            var position = new Position(37.781751, -122.410005); // Latitude, Longitude
+            var position1 = new Position(41.1589638, -73.2577154); // Latitude, Longitude
             var pin = new Pin
             {
                 Type = PinType.Place,
-                Position = position,
-                Label = "Rest Area - Dottie's True Blue Cafe",
-                Address = "28 6th St, San Francisco, CA 94103",
+                Position = position1,
+                Label = "Rest Area - Tully",
+                Address = "1073N Benson Rd, Fairfield, CT 06824",
             };
-            MyMap.Pins.Add(pin);
+            map.Pins.Add(pin);
 
-            //Polyline
-            /*
-            MyMap.Add(new Position(37.782249, -122.410636));
-            MyMap.Add(new Position(37.781683, -122.415513));
-            MyMap.Add(new Position(37.783555, -122.415908));
-            MyMap.Add(new Position(37.784151, -122.410966));
-            MyMap.
-            */
+            //polyline
+            polyline = new Polyline();
+            polyline.StrokeColor = Color.Blue;
+            polyline.StrokeWidth = 5f;
+            polyline.Positions.Add(new Position(41.1611863, -73.2541933));
+            polyline.Positions.Add(new Position(41.1602231, -73.2577875));
+            polyline.Positions.Add(new Position(41.1603579, -73.2580356));
+            polyline.Positions.Add(new Position(41.1602597, -73.2583645));
+            polyline.Positions.Add(new Position(41.1604977, -73.2586189));
+            polyline.Positions.Add(new Position(41.1610376, -73.2588064));
+            polyline.Positions.Add(new Position(41.1612643, -73.2594099));
+            polyline.Positions.Add(new Position(41.1616576, -73.2598085));
+            polyline.Positions.Add(new Position(41.1613491, -73.2613005));
+            polyline.Positions.Add(new Position(41.1609955, -73.2616153));
+            polyline.Positions.Add(new Position(41.1598104, -73.2611669));
+            polyline.Positions.Add(new Position(41.1596637, -73.2607925));
+            polyline.Positions.Add(new Position(41.1581153, -73.2598390));
+            polyline.Positions.Add(new Position(41.1580661, -73.2586883));
+            polyline.Positions.Add(new Position(41.1587136, -73.2569479));
+            map.Polylines.Add(polyline);
         }
+
+
+
         public void BtnStartClicked(object sender, EventArgs e)
         {
             if (BtnStart.Text == "Start")
@@ -76,12 +92,10 @@ namespace FitnessApp
         public void BtnStopClicked(object sender, EventArgs e)
         {
             stopWatch.Stop();
-            lblStopWatch.Text ="00:00:00";
+            lblStopWatch.Text = "00:00:00";
 
 
-            DisplayAlert("Alert", "Are you sure you're going to Stop? ", "Yes", "No");
+            DisplayAlert("Result page have not done yet", "Are you sure you're going to Stop? ", "Yes", "No");
         }
-
-   
     }
 }
