@@ -3,51 +3,50 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="FitnessApp.MapPage">
-    <ContentPage.Content>
-    <StackLayout>
-        <StackLayout   >
-            <maps:Map  HeightRequest="200"
-            x:Name="MyMap"
-            IsShowingUser="true"
-            MapType="Street"
-        />
-        </StackLayout>
+    <StackLayout Spacing="10" Padding="5" Orientation="Vertical"
+		x:Name="outerStack">
+        <!-- can change orientation to make responsive -->
+        <ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="1000">
+            <StackLayout  Orientation="Horizontal">
+                <maps:Map  HeightRequest="350"
+                x:Name="MyMap"
+                IsShowingUser="true"
+                MapType="Street"
+                />
+            </StackLayout>
+            <StackLayout >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
 
-        <Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="50" />                
-    <RowDefinition Height="30" />
-    <RowDefinition Height="50" />
-    <RowDefinition Height="30" />
-    <RowDefinition Height="50" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="*" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-  <Label Text="Duration" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDuration" Grid.Row="1" Grid.Column="0" />
-  <Label Text="Distance" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDistance" Grid.Row="1" Grid.Column="1" />
-  <Label Text="00:00:00" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblStopWatch" Grid.Row="2" Grid.Column="0" />
-  <Label Text="0 KM" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblDistanceKM" Grid.Row="2" Grid.Column="1" />
-  <Label Text="Calories" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="0" />
-  <Label Text="Heart Rate" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="1" />
-  <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblCalories"  Grid.Row="4" Grid.Column="0" />
-  <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblHeartRate" Grid.Row="4" Grid.Column="1" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                        <Label Text="Duration" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDuration" Grid.Row="1" Grid.Column="0" />
+                        <Label Text="Distance" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDistance" Grid.Row="1" Grid.Column="1" />
+                        <Label Text="00:00:00" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblStopWatch" Grid.Row="2" Grid.Column="0" />
+                        <Label Text="0 KM"     HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDistanceKM" Grid.Row="2" Grid.Column="1" />
+                    <!--
+                <Label Text="Calories" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="0" />
+      <Label Text="Heart Rate" HorizontalTextAlignment="Center" FontSize="25" Grid.Row="3" Grid.Column="1" />
+      <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblCalories"  Grid.Row="4" Grid.Column="0" />
+      <Label Text="0" HorizontalTextAlignment="Center" FontSize="25" x:Name="lblHeartRate" Grid.Row="4" Grid.Column="1" />
+    -->
 
-
-  </Grid>
-        
-        <StackLayout>
-             
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
-                <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
-
-
+                </Grid>
             </StackLayout>
            
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
+                    <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
+                </StackLayout>
 
         </StackLayout>
+    </ScrollView>
     </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

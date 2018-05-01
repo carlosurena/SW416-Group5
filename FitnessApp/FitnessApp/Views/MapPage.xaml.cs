@@ -31,7 +31,7 @@ namespace FitnessApp
 
             MyMap.MoveToRegion(
             MapSpan.FromCenterAndRadius(
-                    new Position(37.785813, -122.406654), Distance.FromMiles(0.5)));
+                    new Position(41.158744,-73.256815), Distance.FromMiles(0.3)));
 
 
             //Add pins on map
@@ -81,5 +81,7 @@ namespace FitnessApp
 
             DisplayAlert("Alert", "Are you sure you're going to Stop? ", "Yes", "No");
         }
+
+   
     }
 }
