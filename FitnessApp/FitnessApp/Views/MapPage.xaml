@@ -15,7 +15,8 @@
               Rotation = 30
               Tilt = 60
             -->
-        <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="1000">
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical"
+		x:Name="stackLayout">
             <StackLayout  Orientation="Horizontal">
 
                 <maps:Map  HeightRequest="350"
@@ -44,7 +45,7 @@
                     <Label Text="0 KM"     HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDistanceKM" Grid.Row="2" Grid.Column="1" />
                 </Grid>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="stackBtn">
                 <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
                 <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
             </StackLayout>

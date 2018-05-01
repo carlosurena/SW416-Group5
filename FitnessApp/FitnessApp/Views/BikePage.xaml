@@ -48,7 +48,7 @@
                     <RowDefinition Height="200" />
                 </Grid.RowDefinitions>
                 <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
-        <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"   Clicked="BtnBikeClicked"/>
+                <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"   Clicked="BtnBikeClicked"/>
 
             </Grid>
         </StackLayout>

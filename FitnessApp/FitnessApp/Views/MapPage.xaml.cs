@@ -27,7 +27,7 @@ namespace FitnessApp
         public MapPage()
         {
             InitializeComponent();
-
+            
 
             //Map location
 
@@ -97,5 +97,28 @@ namespace FitnessApp
 
             DisplayAlert("Result page have not done yet", "Are you sure you're going to Stop? ", "Yes", "No");
         }
+
+        //Responsive Layout
+        private double width = 0;
+        private double height = 0;
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+            if (width != this.width || height != this.height)
+            {
+                this.width = width;
+                this.height = height;
+                if (width > height)
+                {
+                    stackLayout.Orientation = StackOrientation.Horizontal;
+                    stackBtn.Orientation = StackOrientation.Vertical;
+                }
+                else
+                {
+                    stackLayout.Orientation = StackOrientation.Vertical;
+                }
+            }
+        }
+        //End Responsive Layout
     }
 }
