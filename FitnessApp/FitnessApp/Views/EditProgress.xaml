@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitnessApp.Views.EditProgress">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text = "Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing = "20" Padding="15">
+            <Label Text = "Enter Monthly Goal Mileage" FontSize="Large" VerticalOptions="Center"/>
+            <Label Text = "Running:" FontSize="Medium" />
+            <Slider x:Name="run_slider" Maximum="100" Minimum="0" ValueChanged="Slider_ValueChanged"/>
+            <Label x:Name="runLabel" />
+            <Label Text = "Biking:" FontSize="Medium" />
+            <Slider x:Name="bike_slider" Maximum="100" Minimum="0" ValueChanged="Slider_ValueChanged"/>
+            <Label x:Name="bikeLabel" />
+            <Label Text = "Walking:" FontSize="Medium" />
+            <Slider x:Name="walk_slider" Maximum="100" Minimum="0" ValueChanged="Slider_ValueChanged"/>
+            <Label x:Name="walkLabel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,8 +6,9 @@
     xmlns:common="clr-namespace:FitnessApp"
     Title="{Binding Title}">
 
-    
-
+    <ContentPage.ToolbarItems>     
+        <ToolbarItem Text="About" Clicked="About_Clicked" />
+    </ContentPage.ToolbarItems>
 
     <StackLayout>
         <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">

@@ -88,6 +88,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IImageResize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GalleryImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\ImageGallery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EditProgress.xaml.cs">
+      <DependentUpon>EditProgress.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -150,6 +153,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EditProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Controls\" />

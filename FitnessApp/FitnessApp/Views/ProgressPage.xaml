@@ -4,15 +4,16 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.ProgressPage">
-
+            
+         
     <StackLayout Orientation="Vertical"
                  HorizontalOptions="FillAndExpand" 
                  Padding="10" BackgroundColor="White">
 
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="Fill" HorizontalOptions="Fill">
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo" VerticalOptions="Center" HeightRequest="64" />
+                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
+                    <Image Source="avatar" VerticalOptions="Center" HeightRequest="80" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
@@ -28,18 +29,17 @@
           <Label HorizontalOptions="FillAndExpand" Text="21"  />
         </StackLayout>
 
-        <StackLayout Orientation="Vertical" HeightRequest="300" Margin="20">
-            <Label Text="Progress" FontSize="20" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
-
-            <Label Text="Running" FontSize="16" HorizontalOptions="Start" Margin="20"/>
+        <StackLayout Orientation="Vertical" Margin="10">
+            <Label Text="Progress" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Button Text="Edit Goals" VerticalOptions="Center" Clicked="Edit_Clicked"/>
+            <Label Text="Running" FontSize="16" HorizontalOptions="Start" Margin="15"/>
             <ProgressBar x:Name="bar1" Progress="0.9"/>
-
-            <Label Text="Biking" FontSize="16" HorizontalOptions="Start" Margin="20"/>
+            <Label Text="Biking" FontSize="16" HorizontalOptions="Start" Margin="15"/>
             <ProgressBar x:Name="bar2" Progress="0.3"/>
-
-            <Label Text="Walking" FontSize="16" HorizontalOptions="Start" Margin="20"/>
-            <ProgressBar x:Name="bar3" Progress="0.5"/>
+            <Label Text="Walking" FontSize="16" HorizontalOptions="Start" Margin="15"/>
+            <ProgressBar x:Name="bar3" Progress="0.5" />
         </StackLayout>
+
     </StackLayout>
 </ScrollView>
 
