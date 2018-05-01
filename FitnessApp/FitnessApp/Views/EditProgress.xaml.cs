@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -22,7 +22,7 @@ namespace FitnessApp
             }
             else if (sender == walk_slider)
             {
-                walkLabel.Text = String.Format("Miles to Run = {0:N1}", (int)args.NewValue);
+                walkLabel.Text = String.Format("Miles to Walk = {0:N1}", (int)args.NewValue);
             }
         }
         async void Save_Clicked(object sender, EventArgs e)
