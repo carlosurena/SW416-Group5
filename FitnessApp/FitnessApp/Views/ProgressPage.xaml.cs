@@ -13,7 +13,7 @@ namespace FitnessApp
         }
         async void Edit_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new EditProgress());
+            await Navigation.PushAsync(new EditProgress());
         }
 
     }

@@ -13,7 +13,7 @@
         <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
-                    <Image Source="avatar" VerticalOptions="Center" HeightRequest="80" />
+                    <Image Source="avatar" VerticalOptions="Center" HeightRequest="100" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
