@@ -10,8 +10,8 @@
     </ContentPage.ToolbarItems>
 
 
-    <StackLayout>
-        <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
+    <StackLayout x:Name="ButtonContainer">
+        <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center" >
             <Button Text="Me" Clicked="Me_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
             <Button Text="Featured" Clicked="Featured_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
         </StackLayout>

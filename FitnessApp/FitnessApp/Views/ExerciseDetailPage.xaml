@@ -12,6 +12,7 @@
             <Label Text="{Binding Exercise.secondaryBodyPart}" HorizontalTextAlignment="Center" FontSize="Small" />
 
             <StackLayout>
+                <ScrollView>
                 <Grid x:Name="WorkoutGrid">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -29,10 +30,11 @@
                     <Label Text="1" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
                     <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="1"></Entry>
                     <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="2"></Entry>
-                     <Button Text="+" Clicked="AddSet_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" Grid.Row="2" Grid.Column="2"></Button>
+                    <Button x:Name="deleteButton" Text="-" Clicked="DeleteSet_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#f7362b" Grid.Row="2" Grid.Column="1"></Button>
+                    <Button x:Name="addButton" Text="+" Clicked="AddSet_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" Grid.Row="2" Grid.Column="2"></Button>
 
                 </Grid>
-                
+                </ScrollView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
