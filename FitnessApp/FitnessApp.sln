@@ -52,6 +52,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {D200F890-AA4A-4527-B3B2-32B4CD7C7B9A}
+=======
+		SolutionGuid = {B2783C44-2A4D-49CA-9D67-E410565746BB}
+>>>>>>> XIn-New-Branch
 	EndGlobalSection
 EndGlobal

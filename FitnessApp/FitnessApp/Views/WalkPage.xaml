@@ -4,11 +4,14 @@
              x:Class="FitnessApp.WalkPage"
 
              HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
+
+    <ScrollView>
+        <StackLayout>
     <Label FontSize="50" HorizontalOptions="Center" Margin="0, 20, 0, 20">
         <Label.FormattedText>
             <FormattedString>
                 <FormattedString.Spans>
-                    <Span Text="By walking, you got:" FontAttributes="Bold" FontSize="22" />
+                    <Span Text="You've walked a total of:" FontAttributes="Bold" FontSize="22" />
                 </FormattedString.Spans>
             </FormattedString>
         </Label.FormattedText>
@@ -32,7 +35,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
+                        <Span Text="Miles" FontAttributes="Bold" FontSize="22" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -47,4 +50,7 @@
         <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"  Clicked="BtnWalkClicked"/>
 
             </Grid>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
+              
+</StackLayout>

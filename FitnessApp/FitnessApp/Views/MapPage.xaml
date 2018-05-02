@@ -1,8 +1,56 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="FitnessApp.MapPage">
- 
-    <Label Text="THIS IS A MapPage"></Label>
- 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    x:Class="FitnessApp.MapPage"
+    Title="BasicMap">
+    <ContentPage.Content>
+
+        <!--
+            Initial CameraUpdate
+              Location = Sao Paulo
+              Zoom = 13
+              Rotation = 30
+              Tilt = 60
+            -->
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical"
+		x:Name="stackLayout">
+            <StackLayout  Orientation="Horizontal">
+
+                <maps:Map  HeightRequest="350"
+                       VerticalOptions="FillAndExpand"
+                        x:Name="map"
+                        IsShowingUser="true"
+                       MyLocationEnabled="True"
+                        MapType="Street"
+                    />
+            </StackLayout>
+            <StackLayout >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Duration" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDuration" Grid.Row="1" Grid.Column="0" />
+                    <Label Text="Distance" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDistance" Grid.Row="1" Grid.Column="1" />
+                    <Label Text="00:00:00" HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblStopWatch" Grid.Row="2" Grid.Column="0" />
+                    <Label Text="0 KM"     HorizontalTextAlignment="Center"  FontSize="25" x:Name="lblDistanceKM" Grid.Row="2" Grid.Column="1" />
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" x:Name="stackBtn">
+                <Button Text="Start" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStartClicked" x:Name="BtnStart"/>
+                <Button Text="Stop" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" HeightRequest="80" WidthRequest="80" BorderRadius="40" Clicked="BtnStopClicked" x:Name="BtnStop"/>
+            </StackLayout>
+            
+          
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

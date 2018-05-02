@@ -58,7 +58,7 @@ namespace FitnessApp
                 return;
 
             IsBusy = true;
-
+                
             try
             {
 
