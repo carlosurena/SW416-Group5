@@ -181,6 +181,13 @@
     <ImageAsset Include="Assets.xcassets\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%28120%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%2860%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%2858%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%2887%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%2840%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%2880%29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Logo%281024%29.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\tab_about.png" />
