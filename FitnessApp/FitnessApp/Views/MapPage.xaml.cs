@@ -2,12 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Reactive.Disposables;
-using System.Reactive.Linq;
-using Prism.Navigation;
-using Prism.Services;
-using Reactive.Bindings;
-using Reactive.Bindings.Extensions;
 using System.Diagnostics;
 using System.Threading;
 using System.Globalization;
@@ -15,7 +9,6 @@ using System.Threading.Tasks;
 using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
-using System.Reactive.Concurrency;
 using System.Linq;
 
 namespace FitnessApp
@@ -101,7 +94,7 @@ namespace FitnessApp
             lblStopWatch.Text = "00:00:00";
 
 
-            DisplayAlert("Result page have not done yet", "Are you sure you're going to Stop? ", "Yes", "No");
+            //DisplayAlert("Result page have not done yet", "Are you sure you're going to Stop? ", "Yes", "No");
         }
 
         //Responsive Layout
