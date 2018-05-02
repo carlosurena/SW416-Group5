@@ -14,7 +14,11 @@ namespace FitnessApp
         public CardioPage()
         {
             InitializeComponent();
+<<<<<<< HEAD
             BindingContext = new CardioViewModel();
+=======
+            BindingContext =  new CardioViewModel();
+>>>>>>> XIn-New-Branch
             BtnRun.BackgroundColor = Color.LightGreen;
         }
 

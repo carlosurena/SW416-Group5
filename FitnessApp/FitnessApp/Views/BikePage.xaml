@@ -4,11 +4,15 @@
              x:Class="FitnessApp.BikePage"
 
              HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
-    <Label FontSize="50" HorizontalOptions="Center" Margin="0, 20, 0, 20">
+
+
+    <ScrollView>
+        <StackLayout>
+            <Label FontSize="50" HorizontalOptions="Center" Margin="0, 20, 0, 20">
         <Label.FormattedText>
             <FormattedString>
                 <FormattedString.Spans>
-                    <Span Text="By bike, you got:" FontAttributes="Bold" FontSize="22" />
+                    <Span Text="You've biked a total of:" FontAttributes="Bold" FontSize="22" />
                 </FormattedString.Spans>
             </FormattedString>
         </Label.FormattedText>
@@ -32,7 +36,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
+                                <Span Text="Miles" FontAttributes="Bold" FontSize="22" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -44,7 +48,10 @@
                     <RowDefinition Height="200" />
                 </Grid.RowDefinitions>
                 <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
-        <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"   Clicked="BtnBikeClicked"/>
+                <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black"   Clicked="BtnBikeClicked"/>
 
             </Grid>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
+               
+                </StackLayout>

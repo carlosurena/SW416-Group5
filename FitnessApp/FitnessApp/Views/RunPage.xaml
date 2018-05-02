@@ -3,47 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.RunPage"
 
-             HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
-    <Label FontSize="50" HorizontalOptions="Center" Margin="0, 20, 0, 20">
-        <Label.FormattedText>
-            <FormattedString>
-                <FormattedString.Spans>
-                    <Span Text="By running, you got:" FontAttributes="Bold" FontSize="22" />
-                </FormattedString.Spans>
-            </FormattedString>
-        </Label.FormattedText>
-    </Label>
-    <Image Source="Run.png" HeightRequest="100"></Image>
+             HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White" >
+
+    <ScrollView>
+        <StackLayout>
+            <Label FontSize="50" HorizontalOptions="Center"  Margin="0, 20, 0, 20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="You've ran a total of:" FontAttributes="Bold" FontSize="22" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Image Source="Run.png" HeightRequest="100"></Image>
 
 
-    <StackLayout Spacing="10" x:Name="layout">
+        <StackLayout Spacing="10" x:Name="layout">
 
-                <Label FontSize="50" HorizontalOptions="Center" Margin="0, 0, 0, 20">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="159.32" FontAttributes="Bold" FontSize="50" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label FontSize="22" HorizontalOptions="Center" >
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </StackLayout>
+                    <Label FontSize="50" HorizontalOptions="Center" Margin="0, 0, 0, 20">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="159.32" FontAttributes="Bold" FontSize="50" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="22" HorizontalOptions="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                            <Span Text="Miles" FontAttributes="Bold" FontSize="22" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="200" />
-                </Grid.RowDefinitions>
-                <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
-                <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black" Clicked="BtnGoClicked"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
+                    <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black" Clicked="BtnGoClicked"/>
 
-            </Grid>
+                </Grid>
+             
     </StackLayout>
+    </ScrollView>
+</StackLayout>
