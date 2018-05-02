@@ -28,8 +28,17 @@ namespace FitnessApp
         {
 
             var result = await OpenPasswordPage();
-            ProgressPage.IsVisible = false;
-            ProtectedPage.IsVisible = true;
+            if (result == "password")
+            {
+                ProgressPage.IsVisible = false;
+                ProtectedPage.IsVisible = true;
+            }
+            else
+            {
+                ProgressPage.IsVisible = true;
+                ProtectedPage.IsVisible = false;
+            }
+
 
         }
 

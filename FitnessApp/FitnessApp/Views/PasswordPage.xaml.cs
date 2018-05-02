@@ -79,11 +79,10 @@ namespace FitnessApp
             SaveButtonEventHandler?.Invoke(this, e);
         }
 
-        async private void CancelButton_Clicked(object sender, EventArgs e)
+        private void CancelButton_Clicked(object sender, EventArgs e)
         {
             // invoke the event handler if its being subscribed
             CancelButtonEventHandler?.Invoke(this, e);
-            await Navigation.PushAsync(new MePage());
 
         }
 
