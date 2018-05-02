@@ -32,7 +32,7 @@ namespace FitnessApp
                 return;
 
             IsBusy = true;
-
+                
             try
             {
                 Items.Clear();

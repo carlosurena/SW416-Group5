@@ -24,16 +24,22 @@ namespace FitnessApp
     {
         Stopwatch stopWatch = new Stopwatch();
         Polyline polyline = null;
+        private Position _position;
+
+       
         public MapPage()
         {
             InitializeComponent();
-            
-
+          
             //Map location
+           
+            if (IsLocationAvailable())
+            {
+                GetPosition();
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(_position, Distance.FromMiles(0.3)));
 
-            map.MoveToRegion(
-            MapSpan.FromCenterAndRadius(
-                    new Position(41.158744, -73.256815), Distance.FromMiles(0.3)));
+            }
+
 
             //Add pins on map
             var position1 = new Position(41.1589638, -73.2577154); // Latitude, Longitude
@@ -120,5 +126,50 @@ namespace FitnessApp
             }
         }
         //End Responsive Layout
+
+        public bool IsLocationAvailable()
+        {
+            if (!CrossGeolocator.IsSupported)
+                return false;
+
+            return CrossGeolocator.Current.IsGeolocationAvailable;
+        }
+        public async void GetPosition()
+        {
+            Plugin.Geolocator.Abstractions.Position position = null;
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 100;
+
+                position = await locator.GetLastKnownLocationAsync();
+
+                if (position != null)
+                {
+                    _position = new Position(position.Latitude, position.Longitude);
+                    //got a cahched position, so let's use it.
+                    return;
+                }
+
+                if (!locator.IsGeolocationAvailable || !locator.IsGeolocationEnabled)
+                {
+                    //not available or enabled
+                    return;
+                }
+
+                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                //Display error as we have timed out or can't get location.
+            }
+            _position = new Position(position.Latitude, position.Longitude);
+            if (position == null)
+                return;
+
+        }
     }
+
 }
