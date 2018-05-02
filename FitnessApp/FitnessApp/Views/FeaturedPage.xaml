@@ -7,48 +7,114 @@
 
     <StackLayout 
     Orientation="Vertical"
-    HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
+    HorizontalOptions="FillAndExpand" 
+        Padding="10" BackgroundColor="#202020">
 
-        <Label Text="Featured Workouts" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
-        <StackLayout  Orientation="Vertical" BackgroundColor="#2cb3f7" HeightRequest="200" >
+        <Label Text="Featured Workouts" 
+               FontSize="28" HorizontalOptions="Center" 
+               FontAttributes="Bold" TextColor="White"/>
+        
+        <Label Text=" "></Label>
+        <Grid BackgroundColor="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="rock-legs.jpg" Aspect="Fill"></Image>
             <Label 
-                Text="5-MINUTE ABS" 
+                Text="The Rock's Workout Series: Legs" 
                 FontSize="24" 
                 FontFamily="Helvetica Neue" 
                 TextColor="White" 
                 Margin="20"
                 FontAttributes="Bold" 
                 HorizontalTextAlignment="Center" 
-                VerticalOptions="CenterAndExpand">
-            </Label>
+                VerticalOptions="Center">
+            </Label>  
+        </Grid>
+        <!-- -->
+        <Grid BackgroundColor="Red">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="arnold-bicep.jpg" Aspect="Fill"></Image>
             <Label 
-                Text="Abs" 
-                HorizontalOptions="CenterAndExpand"
-                FontSize="24"
-                FontFamily="Helvetica Neue"
-                TextColor="White"
-                FontAttributes="Bold"
-                VerticalOptions="StartAndExpand">
-                
-            </Label>
-
-
-        </StackLayout>
-        <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
-            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-        </StackLayout>
-         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
-            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-        </StackLayout>
-         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
-            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-        </StackLayout>
-         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
-            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-        </StackLayout>
-         <StackLayout Orientation="Vertical" BackgroundColor="Red" HeightRequest="200" >
-            <Label Text="5-minute Abs" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand"></Label>
-        </StackLayout>
+                Text="Arnold's Legendary Biceps" 
+                FontSize="24" 
+                FontFamily="Helvetica Neue" 
+                TextColor="White" 
+                Margin="20"
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="Center">
+            </Label>  
+        </Grid>
+        <!-- -->
+        <Grid BackgroundColor="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="rock-back.jpg" Aspect="Fill"></Image>
+            <Label 
+                Text="The Rock's Workout Series: Back" 
+                FontSize="24" 
+                FontFamily="Helvetica Neue" 
+                TextColor="White" 
+                Margin="20"
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="Center">
+            </Label>  
+        </Grid>
+        <!-- -->
+        <Grid BackgroundColor="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="vince-dunk.jpg" Aspect="Fill"></Image>
+            <Label 
+                Text="The Vertical Jump Bible" 
+                FontSize="24" 
+                FontFamily="Helvetica Neue" 
+                TextColor="White" 
+                Margin="20"
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="Center">
+            </Label>  
+        </Grid>
+        <!-- -->
+        <Grid BackgroundColor="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="rock-legs.jpg" Aspect="Fill"></Image>
+            <Label 
+                Text="The Rock's Workout Series: Abs" 
+                FontSize="24" 
+                FontFamily="Helvetica Neue" 
+                TextColor="White" 
+                Margin="20"
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="Center">
+            </Label>  
+        </Grid>
+         
 
         
            
