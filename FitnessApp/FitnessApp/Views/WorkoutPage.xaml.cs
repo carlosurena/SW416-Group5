@@ -25,15 +25,12 @@ namespace FitnessApp
         {
             ItemList.IsVisible = true;
             FeaturedPage.IsVisible = false;
-            ButtonContainer.BackgroundColor = Color.White;
-
 
         }
         async void Featured_Clicked(object sender, EventArgs e)
         {
             FeaturedPage.IsVisible = true;
             ItemList.IsVisible = false;
-            ButtonContainer.BackgroundColor = Color.FromHex("#202020");
 
         }
         protected override void OnAppearing()

@@ -218,10 +218,6 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <BundleResource Include="Resources\WorkoutSQLite.db3" />
-    <BundleResource Include="Resources\rock-legs.jpg" />
-    <BundleResource Include="Resources\arnold-bicep.jpg" />
-    <BundleResource Include="Resources\rock-back.jpg" />
-    <BundleResource Include="Resources\vince-dunk.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

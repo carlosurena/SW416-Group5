@@ -51,7 +51,6 @@ namespace FitnessApp
         }
 
 
-
         async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
