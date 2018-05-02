@@ -87,6 +87,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\WorkoutDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ExerciseDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EditProgress.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InputAlertDialogBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PasswordPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProtectedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IImageResize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ImageGallery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MyView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GalleryImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Profile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProfileInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -149,6 +159,14 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EditProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PasswordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />

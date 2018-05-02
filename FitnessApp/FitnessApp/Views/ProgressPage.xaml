@@ -4,32 +4,42 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitnessApp.ProgressPage">
-
+            
+         
     <StackLayout Orientation="Vertical"
                  HorizontalOptions="FillAndExpand" 
                  Padding="10" BackgroundColor="White">
 
-        <Label Text="Sarah Kurtz" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" />
-        <Label Text="Profile" FontSize="20" HorizontalOptions="Center" />
-
-        <StackLayout  Orientation="Vertical" Padding="0,0,0,10">
-            <Label 
-                Text="Sex:" FontSize="20" 
-                HorizontalOptions="Start"
-                VerticalOptions="Center"/>
-            <Entry HorizontalOptions="FillAndExpand"
-                   Text="Female"/> 
-            <Label 
-                Text="Age:" FontSize="20" 
-                HorizontalOptions="Start"
-                VerticalOptions="Center"/>
-            <Entry HorizontalOptions="FillAndExpand"
-                   Text="21"/>
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
+                    <Image Source="avatar" VerticalOptions="Center" HeightRequest="100" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        
+        <Label Text="Sarah Kurtz" FontSize="28" HorizontalOptions="Center" Margin="20" FontAttributes="Bold" />
+        <StackLayout Orientation="Horizontal">
+          <Label FontSize="14" Text="Sex:"
+          HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+          <Label HorizontalOptions="FillAndExpand" Text="Female" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label FontSize="14" Text="Age:"  HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+          <Label HorizontalOptions="FillAndExpand" Text="21"  />
         </StackLayout>
 
-        <StackLayout Orientation="Vertical" HeightRequest="200">
-            <Label Text="Progress" FontSize="20" HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical" Margin="10">
+            <Label Text="Progress" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Button Text="Edit Goals" VerticalOptions="Center" Clicked="Edit_Clicked"/>
+            <Label Text="Running" FontSize="16" HorizontalOptions="Start" Margin="15"/>
+            <ProgressBar x:Name="bar1" Progress="0.9"/>
+            <Label Text="Biking" FontSize="16" HorizontalOptions="Start" Margin="15"/>
+            <ProgressBar x:Name="bar2" Progress="0.3"/>
+            <Label Text="Walking" FontSize="16" HorizontalOptions="Start" Margin="15"/>
+            <ProgressBar x:Name="bar3" Progress="0.5" />
         </StackLayout>
+
     </StackLayout>
 </ScrollView>
 

@@ -11,5 +11,10 @@ namespace FitnessApp
         {
             InitializeComponent();
         }
+        async void Edit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditProgress());
+        }
+
     }
 }
