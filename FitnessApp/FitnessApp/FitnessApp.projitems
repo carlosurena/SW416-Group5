@@ -81,21 +81,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.cs">
       <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\WorkoutDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ExerciseDetailViewModel.cs" />
-=======
-    <Compile Include="$(MSBuildThisFileDirectory)Views\StopWatchPage.xaml.cs">
-      <DependentUpon>StopWatchPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\LabPage.xaml.cs">
-      <DependentUpon>LabPage.xaml</DependentUpon>
-    </Compile>
->>>>>>> XIn-New-Branch
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -157,20 +148,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ExerciseDetailPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
-=======
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\StopWatchPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LabPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
->>>>>>> XIn-New-Branch
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -45,16 +45,6 @@
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Can we use your location at all times?</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Can we use your location when your app is being used?</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Can we use your location at all times?</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
+	<false />
 </dict>
 </plist>

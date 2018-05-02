@@ -8,20 +8,86 @@
 
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="End" Margin="0,20,0,-45">
+
+                    <Label FontSize="22">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Fitness Tracker" FontAttributes="Bold" FontSize="22" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                     
+                </StackLayout>
+            </StackLayout>
+
 
             <StackLayout>
-                <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Run" Clicked="BtnRunClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115" x:Name="BtnRun"></Button>
+        <StackLayout Padding="5,50, 0,5" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Run" Clicked="BtnRunClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115" x:Name="BtnRun"></Button>
                     <Button Text="Walk" Clicked="BtnWalkClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115" x:Name="BtnWalk"></Button>
                     <Button Text="Bike" Clicked="BtnBikeClicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="115" x:Name="BtnBike"></Button>
-                </StackLayout>
-                <common:RunPage x:Name="RunPage" IsVisible="true"></common:RunPage>
-                <common:WalkPage x:Name="WalkPage" IsVisible="false"></common:WalkPage>
-                <common:BikePage x:Name="BikePage" IsVisible="false"></common:BikePage>
+        </StackLayout>
+        <common:RunPage x:Name="RunPage" IsVisible="true"></common:RunPage>
+        <common:WalkPage x:Name="WalkPage" IsVisible="false"></common:WalkPage>
+        <common:BikePage x:Name="BikePage" IsVisible="false"></common:BikePage>
+                        
+    </StackLayout>
+            <!--
+            <Grid>
+             
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" /> 
+                <RowDefinition Height="50" /> 
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
+          
+            <Button Margin="0,10,0,0" Text="Run"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="0" />
+            <Button Margin="0,10,0,0" Text="Walk"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="1" />
+            <Button Margin="0,10,0,0" Text="Bike"  BackgroundColor="{StaticResource Primary}" TextColor="White" Grid.Row="1" Grid.Column="2" />
+         
+            </Grid>
+            <StackLayout Spacing="10" x:Name="layout">
+
+                <Label FontSize="50" HorizontalOptions="Center" Margin="0, 100, 0, 20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="159.32" FontAttributes="Bold" FontSize="50" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="22" HorizontalOptions="Center" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Total Kilometers" FontAttributes="Bold" FontSize="22" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
-        
-  
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Button Image="Go.png"  VerticalOptions="Fill">Go!!!</Button>
+                <Button Text="GO!!!" FontSize="50"  VerticalOptions="Fill" TextColor="Black" Clicked="OnGoButtonClicked" />
+
+            </Grid>
+
+             -->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
