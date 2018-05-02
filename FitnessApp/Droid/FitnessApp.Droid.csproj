@@ -183,6 +183,9 @@
     <Reference Include="Xamarin.Forms.GoogleMaps">
       <HintPath>..\packages\Xamarin.Forms.GoogleMaps.2.3.0\lib\MonoAndroid70\Xamarin.Forms.GoogleMaps.dll</HintPath>
     </Reference>
+    <Reference Include="PSC.Xamarin.MvvmHelpers">
+      <HintPath>..\packages\PSC.Xamarin.MvvmHelpers.1.0.0\lib\portable45-net45+win8+wp8+wpa81\PSC.Xamarin.MvvmHelpers.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />

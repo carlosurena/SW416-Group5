@@ -25,10 +25,11 @@ namespace FitnessApp
                 walkLabel.Text = String.Format("Miles to Walk = {0:N1}", (int)args.NewValue);
             }
         }
-        void Save_Clicked(object sender, EventArgs e)
+        async void Save_Clicked(object sender, EventArgs e)
         {
-          // MessagingCenter.Send(this, "SaveGoal");
-          //  await Navigation.PopToRootAsync();
+           // MessagingCenter.Send(this, "AddItem", Item);
+
+            await Navigation.PopToRootAsync();
         }
     }
 }
