@@ -13,7 +13,7 @@
     <StackLayout>
         <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center">
             <Button Text="Progress" Clicked="Progress_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
-            <Button Text="Protected" Clicked="Protected_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
+            <Button Text="Protected" x:Name="Protected" Clicked="Protected_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" WidthRequest="100"></Button>
 
         </StackLayout>
         <common:ProgressPage x:Name="ProgressPage" IsVisible="true"></common:ProgressPage>
