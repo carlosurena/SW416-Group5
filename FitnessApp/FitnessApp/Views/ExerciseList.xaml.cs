@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
 
@@ -8,15 +7,11 @@ namespace FitnessApp
 {
     public partial class ExerciseList : StackLayout
     {
-
         public ExerciseList()
         {
             InitializeComponent();
 
-            ObservableCollection<Exercise> sortedExerciseList = new ObservableCollection<Exercise>();
-            //ExerciseListView.ItemsSource = 
-
-            //ExerciseListView.ItemsSource = Data.ExerciseList;
+            ExerciseListView.ItemsSource = Data.ExerciseList;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -25,7 +20,7 @@ namespace FitnessApp
             if (exercise == null)
                 return;
 
-            await Navigation.PushAsync(new ExerciseDetailPage(exercise));
+            await Navigation.PushAsync(new ExerciseDetailPage());
 
             // Manually deselect item
             ExerciseListView.SelectedItem = null;

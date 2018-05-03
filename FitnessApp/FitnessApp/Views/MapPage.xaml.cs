@@ -1,74 +1,101 @@
 ﻿using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Reactive.Disposables;
+using System.Reactive.Linq;
+using Prism.Navigation;
+using Prism.Services;
+using Reactive.Bindings;
+using Reactive.Bindings.Extensions;
+using System.Diagnostics;
+using System.Threading;
+using System.Globalization;
 using System.Threading.Tasks;
+using System.Timers;
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps;
+using System.Reactive.Concurrency;
+using System.Linq;
 
 namespace FitnessApp
 {
     public partial class MapPage : ContentPage
-    {
+    { 
+        Stopwatch stopWatch = new Stopwatch();
+        Polyline polyline = null;
         public MapPage()
         {
             InitializeComponent();
 
-            var l = new Label
+
+            //Map location
+
+            map.MoveToRegion(
+            MapSpan.FromCenterAndRadius(
+                    new Position(41.158744, -73.256815), Distance.FromMiles(0.3)));
+
+            //Add pins on map
+            var position1 = new Position(41.1589638, -73.2577154); // Latitude, Longitude
+            var pin = new Pin
             {
-                Text = "This is a Map Page\r\n\r\nThese buttons leave the current app and open the built-in Maps app for the platform"
+                Type = PinType.Place,
+                Position = position1,
+                Label = "Rest Area - Tully",
+                Address = "1073N Benson Rd, Fairfield, CT 06824",
             };
-            var openLocation = new Button
-            {
-                Text = "Open location using built-in Maps app"
-            };
-            openLocation.Clicked += (sender, e) => {
+            map.Pins.Add(pin);
 
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    //https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
-                    Device.OpenUri(new Uri("http://maps.apple.com/?q=394+Pacific+Ave+San+Francisco+CA"));
-                }
-                else if (Device.RuntimePlatform == Device.Android)
-                {
-                    // opens the Maps app directly
-                    Device.OpenUri(new Uri("geo:0,0?q=394+Pacific+Ave+San+Francisco+CA"));
-
-                }
-
-            };
-
-            var openDirections = new Button
-            {
-                Text = "Get directions using built-in Maps app"
-            };
-            openDirections.Clicked += (sender, e) => {
-
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    //https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
-                    Device.OpenUri(new Uri("http://maps.apple.com/?daddr=San+Francisco,+CA&saddr=cupertino"));
-
-                }
-                else if (Device.RuntimePlatform == Device.Android)
-                {
-                    // opens the 'task chooser' so the user can pick Maps, Chrome or other mapping app
-                    Device.OpenUri(new Uri("http://maps.google.com/?daddr=San+Francisco,+CA&saddr=Mountain+View"));
-
-                }
-
-            };
-            Content = new StackLayout
-            {
-                Padding = new Thickness(5, 20, 5, 0),
-                HorizontalOptions = LayoutOptions.Fill,
-                Children = {
-
-                    l,
-                    openLocation,
-                    openDirections
-                }
-            };
+            //polyline
+            polyline = new Polyline();
+            polyline.StrokeColor = Color.Blue;
+            polyline.StrokeWidth = 5f;
+            polyline.Positions.Add(new Position(41.1611863, -73.2541933));
+            polyline.Positions.Add(new Position(41.1602231, -73.2577875));
+            polyline.Positions.Add(new Position(41.1603579, -73.2580356));
+            polyline.Positions.Add(new Position(41.1602597, -73.2583645));
+            polyline.Positions.Add(new Position(41.1604977, -73.2586189));
+            polyline.Positions.Add(new Position(41.1610376, -73.2588064));
+            polyline.Positions.Add(new Position(41.1612643, -73.2594099));
+            polyline.Positions.Add(new Position(41.1616576, -73.2598085));
+            polyline.Positions.Add(new Position(41.1613491, -73.2613005));
+            polyline.Positions.Add(new Position(41.1609955, -73.2616153));
+            polyline.Positions.Add(new Position(41.1598104, -73.2611669));
+            polyline.Positions.Add(new Position(41.1596637, -73.2607925));
+            polyline.Positions.Add(new Position(41.1581153, -73.2598390));
+            polyline.Positions.Add(new Position(41.1580661, -73.2586883));
+            polyline.Positions.Add(new Position(41.1587136, -73.2569479));
+            map.Polylines.Add(polyline);
         }
 
+       
 
+        public void BtnStartClicked(object sender, EventArgs e)
+        {
+            if (BtnStart.Text == "Start")
+            {
+                stopWatch.Start();
+                // Get the elapsed time as a TimeSpan value.
+                TimeSpan ts = stopWatch.Elapsed;
+
+                // Format and display the TimeSpan value.
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
+                    ts.Hours, ts.Minutes, ts.Seconds);
+                lblStopWatch.Text = elapsedTime;
+                BtnStart.Text = "Pause";
+
+            }
+            else
+                BtnStart.Text = "Start";
+
+        }
+        public void BtnStopClicked(object sender, EventArgs e)
+        {
+            stopWatch.Stop();
+            lblStopWatch.Text = "00:00:00";
+
+
+            DisplayAlert("Result page have not done yet", "Are you sure you're going to Stop? ", "Yes", "No");
+        }
     }
 }

@@ -5,7 +5,7 @@
 
              Orientation="Horizontal"
              HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="White">
-         <ListView x:Name="ExerciseListView" ItemsSource="{Binding Exercises}" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadExercisesCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
+         <ListView x:Name="ExerciseListView" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

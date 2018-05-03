@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin;
 
 namespace FitnessApp.iOS
 {
@@ -13,6 +14,9 @@ namespace FitnessApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            FormsMaps.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyC2vdNSeShDVnENSmp-GMuETeXlfIOfhqs");
+            global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
 
 

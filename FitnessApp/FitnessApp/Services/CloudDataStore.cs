@@ -33,7 +33,7 @@ namespace FitnessApp
             return items;
         }
 
-        public async Task<Item> GetItemAsync(int id)
+        public async Task<Item> GetItemAsync(string id)
         {
             if (id != null && CrossConnectivity.Current.IsConnected)
             {
@@ -58,21 +58,21 @@ namespace FitnessApp
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            if (item == null || item.ID == null || !CrossConnectivity.Current.IsConnected)
+            if (item == null || item.Id == null || !CrossConnectivity.Current.IsConnected)
                 return false;
 
             var serializedItem = JsonConvert.SerializeObject(item);
             var buffer = Encoding.UTF8.GetBytes(serializedItem);
             var byteContent = new ByteArrayContent(buffer);
 
-            var response = await client.PutAsync(new Uri($"api/item/{item.ID}"), byteContent);
+            var response = await client.PutAsync(new Uri($"api/item/{item.Id}"), byteContent);
 
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<bool> DeleteItemAsync(int id)
+        public async Task<bool> DeleteItemAsync(string id)
         {
-            if (id <= 0 && !CrossConnectivity.Current.IsConnected)
+            if (string.IsNullOrEmpty(id) && !CrossConnectivity.Current.IsConnected)
                 return false;
 
             var response = await client.DeleteAsync($"api/item/{id}");

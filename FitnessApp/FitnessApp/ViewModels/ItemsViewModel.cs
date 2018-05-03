@@ -10,16 +10,12 @@ namespace FitnessApp
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<Item> Items { get; set; }
-        public ObservableCollection<Exercise> Exercises { get; set; }
-
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Workouts";
             Items = new ObservableCollection<Item>();
-            Exercises = new ObservableCollection<Exercise>();
-
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
@@ -30,11 +26,8 @@ namespace FitnessApp
             });
             MessagingCenter.Subscribe<AddExercisePage, Exercise>(this, "AddExercise", async (obj, item) =>
             {
-                Debug.WriteLine("MSGCENTER exercise");
                 var _item = item as Exercise;
-                Exercises.Add(_item);
-                await App.Database.SaveExerciseAsync(_item);
-                //Data.ExerciseList.Add(_item);
+                Data.ExerciseList.Add(_item);
             });
         }
 

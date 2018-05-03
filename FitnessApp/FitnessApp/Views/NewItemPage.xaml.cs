@@ -14,10 +14,8 @@ namespace FitnessApp
 
             Item = new Item
             {
-                ID = 0,
                 Text = "Item name",
-                Day = "Someday",
-                Description = "Item Description"
+                Description = "This is an item description."
             };
 
             BindingContext = this;
@@ -26,7 +24,6 @@ namespace FitnessApp
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
-
             await Navigation.PopToRootAsync();
         }
     }

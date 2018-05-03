@@ -1,39 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="FitnessApp.ExerciseDetailPage" 
-    Title="{Binding Exercise.name}">
-
-    <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="{Binding Exercise.name}" HorizontalTextAlignment="Center" FontSize="Large" />
-            <Label Text="{Binding Exercise.primaryBodyPart}" HorizontalTextAlignment="Center" FontSize="Small" />
-            <Label Text="{Binding Exercise.secondaryBodyPart}" HorizontalTextAlignment="Center" FontSize="Small" />
-
-            <StackLayout>
-                <Grid x:Name="WorkoutGrid">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Set" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
-                    <Label Text="Weight" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
-                    <Label Text="Reps" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" />
-                    <Label Text="1" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" />
-                    <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="1"></Entry>
-                    <Entry HorizontalTextAlignment="Center" Text="" Grid.Row="1" Grid.Column="2"></Entry>
-                     <Button Text="+" Clicked="AddSet_Clicked" TextColor="White" FontSize="15"  BackgroundColor="#2cb3f7" Grid.Row="2" Grid.Column="2"></Button>
-
-                </Grid>
-                
-            </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:common="clr-namespace:FitnessApp"
+             x:Class="FitnessApp.ExerciseDetailPage" 
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>     
+        <ToolbarItem Text="New" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Spacing="20" Padding="15">
+        <common:ExerciseList></common:ExerciseList>
+    </StackLayout>
 </ContentPage>
